@@ -4,20 +4,21 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding-left: 10px;
-  padding-top: 20px; // space from top
+  padding-top: 20px;
+  width: clamp(15px, 5vw, 30px);
 
   h1 {
-    font-size: 30px;
+    font-size: clamp(15px, 5vw, 30px);
     margin: 0;
   }
 
   h2 {
-    font-size: 23px;
+    font-size: clamp(15px, 5vw, 30px);
     animation: fadeIn 3s 1.8s backwards;
   }
 
   .text-zone {
-    width: 100%;
+    width: clamp(300px, 50vw, 500px);
     max-width: 500px;
     margin: 0;
     display: flex;

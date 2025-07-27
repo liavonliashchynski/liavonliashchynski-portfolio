@@ -1,0 +1,8 @@
+.toggleThemeButton {
+  display: flex;
+  height: 60px;
+  width: clamp(50px, 10vw, 60px);
+  justify-content: flex-start;
+  margin-top: 15px;
+  margin-right: 15px;
+}
