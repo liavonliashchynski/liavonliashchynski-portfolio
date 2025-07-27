@@ -1,8 +1,21 @@
 .toggleThemeButton {
-  display: flex;
-  height: 60px;
-  width: clamp(50px, 10vw, 60px);
+  display: inline-block;
+  position: fixed;
+  height: 30px;
+  top: 13px;
+  right: 5px;
+  width: auto;
+  font-size: clamp(10px, 1vw, 13px);
   justify-content: flex-start;
-  margin-top: 15px;
-  margin-right: 15px;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s;
+}
+
+.toggleThemeButton.hidden {
+  opacity: 0;
+  pointer-events: none;
 }

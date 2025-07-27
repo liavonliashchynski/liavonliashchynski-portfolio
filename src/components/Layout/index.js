@@ -1,8 +1,8 @@
-import './index.scss';
+import React, { useState, useEffect } from 'react';
 import Sidebar from '../Sidebar';
 import { Outlet } from 'react-router-dom';
 import ThemeToggle from '../ThemeToggle';
-import React, { useEffect } from 'react';
+import './index.scss';
 
 const Layout = () => {
   useEffect(() => {
@@ -19,13 +19,31 @@ const Layout = () => {
     };
   }, []);
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const textZone = document.querySelector('.text-zone');
+    if (!textZone) return;
+
+    const handleScroll = () => {
+      setIsVisible(textZone.scrollTop < 50);
+    };
+
+    textZone.addEventListener('scroll', handleScroll);
+
+    return () => {
+      textZone.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Sidebar />
       <div className="page">
         <Outlet />
       </div>
-      <ThemeToggle />
+      {console.log('isVisible:', isVisible)}
+      <ThemeToggle isVisible={isVisible} />
     </div>
   );
 };
