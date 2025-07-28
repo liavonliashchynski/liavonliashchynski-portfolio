@@ -25,9 +25,9 @@ const About = () => {
             />
           </h1>
           <p>
-            Hi, I'm Leon — a Junior Fullstack Developer with hands-on experience
-            in building web applications using React.js, Redux, TypeScript,
-            Node.js, Express, and MySQL.
+            Hi, I'm Liavon — a Junior Fullstack Developer with hands-on
+            experience in building web applications using React.js, Redux,
+            TypeScript, Node.js, Express, and MySQL.
           </p>
           <p align="LEFT">
             I specialize in creating dynamic, responsive, and scalable

@@ -1,4 +1,6 @@
 .contact-form {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   margin-top: 20px;
 
@@ -13,30 +15,31 @@
       margin-bottom: 10px;
       opacity: 0;
       overflow: hidden;
-      display: block;
-      clear: both;
-      position: relative;
       animation: fadeInUp 2s 2s;
       animation-fill-mode: forwards;
     }
 
-    li.half {
-      width: 49%;
-      margin-left: 2%;
-      float: left;
-      clear: none;
+    // li.half {
+    //   width: 49%;
+    //   margin-left: 2%;
+    //   float: left;
+    //   clear: none;
 
-      &:first-child {
-        margin-left: 0;
-      }
-    }
+    //   &:first-child {
+    //     margin-left: 0;
+    //   }
+    // }
   }
 
   input[type='text'],
   input[type='email'] {
     width: 100%;
     border: 0;
-    background: #115173;
+    background: color-mix(
+      in srgb,
+      var(--bg-color) 90%,
+      var(--neutral-base-color) 10%
+    );
     height: 50px;
     font-size: 16px;
     color: #fff;
@@ -47,7 +50,11 @@
   textarea {
     width: 100%;
     border: 0;
-    background: #115173;
+    background: color-mix(
+      in srgb,
+      var(--bg-color) 90%,
+      var(--neutral-base-color) 10%
+    );
     height: 50px;
     font-size: 16px;
     color: #fff;
@@ -57,17 +64,13 @@
   }
 
   .flat-button {
-    color: #ffd700;
-    font-size: 11px;
-    letter-spacing: 3px;
+    color: var(--button-color);
+    background: var(--button-bg-color);
+    border: var(--button-thickness) solid var(--button-border-color);
+    letter-spacing: var(--button-letter-spacing);
     text-decoration: none;
-    padding: 8px 10px;
-    border: 1px solid #ffd700;
-    float: left;
-    border-radius: 4px;
-    background: 0 0;
+    padding: var(--button-padding);
     text-transform: uppercase;
-    float: right;
     text-align: center;
     margin-right: 10px;
   }
@@ -91,7 +94,7 @@
 }
 
 .info-map {
-  position: absolute;
+  display: flex;
   background: #000;
   top: 50px;
   right: 30%;

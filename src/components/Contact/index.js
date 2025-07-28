@@ -21,13 +21,20 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+      )
       .then(
         () => {
           alert('Message successfully sent!');
           window.location.reload(false);
         },
-        () => {
+        (error) => {
+          console.error('❌ Email send failed:', error);
+          console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
           alert('Failed to send the message, please try again');
         },
       );
@@ -85,15 +92,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="info-map">
-          Liavon Liashchynski,
-          <br />
-          Polska,
-          <br />
-          Bielsko-Biała
-          <br />
-          <span>liavonliashchynski@proton.me</span>
-        </div>
         {/* <div className="map-wrap">
           <MapContainer center={[44.96366, 19.61045]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -101,6 +99,15 @@ const Contact = () => {
             </Marker>
           </MapContainer>
         </div> */}
+      </div>
+      <div className="info-map">
+        Liavon Liashchynski,
+        <br />
+        Polska,
+        <br />
+        Bielsko-Biała
+        <br />
+        <span>liavonliashchynski@proton.me</span>
       </div>
       <Loader type="pacman" />
     </>
