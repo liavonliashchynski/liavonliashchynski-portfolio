@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 import { useState } from 'react';
+import { FaReact, FaNodeJs, FaCss3Alt, FaPhp } from 'react-icons/fa';
+import { SiRedux, SiTypescript, SiExpress, SiMysql } from 'react-icons/si';
 import './index.scss';
 
 const Home = () => {
@@ -52,16 +54,19 @@ const Home = () => {
     <div className="container home-page">
       <div className="text-zone">
         <h1>
-          <span className={letterClass}>H</span>
-          <span className={`${letterClass} _11`}>i, </span>
-          <br />
-          <span className={`${letterClass} _12`}>I</span>
-          <span className={`${letterClass} _13`}>'m</span>
+          <span className={`${letterClass} _11`}>H</span>
+          <span className={`${letterClass} _12`}>i</span>
+          <span className={`${letterClass} _13`}>,</span>
           <span className={`${letterClass} _14`}> </span>
+          <br />
+          <span className={`${letterClass} _15`}>I</span>
+          <span className={`${letterClass} _16`}>'</span>
+          <span className={`${letterClass} _17`}>m</span>
+          <span className={`${letterClass} _18`}> </span>
           <AnimatedLetters
             letterClass={letterClass}
             strArray={nameArray}
-            idx={15}
+            idx={18}
           />
           <br />
           <br />
@@ -74,6 +79,39 @@ const Home = () => {
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
+      </div>
+      <div className="tech-stack">
+        <p>My tech stack:</p>
+        <div className="icons-container">
+          <div className="icons-first-row">
+            <span>
+              <FaReact /> React.js
+            </span>
+            <span>
+              <SiRedux /> Redux
+            </span>
+            <span>
+              <SiTypescript /> TypeScript
+            </span>
+            <span>
+              <FaCss3Alt /> CSS
+            </span>
+          </div>
+          <div className="icons-second-row">
+            <span>
+              <FaNodeJs /> Node.js
+            </span>
+            <span>
+              <SiExpress /> Express.js
+            </span>
+            <span>
+              <SiMysql /> MySQL
+            </span>
+            <span>
+              <FaPhp /> PHP
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

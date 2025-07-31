@@ -1,7 +1,11 @@
-.contact-form {
+.contact-page {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 70vw;
+  overflow-y: auto;
+}
+
+.contact-form {
   margin-top: 20px;
 
   ul {
@@ -48,6 +52,7 @@
   }
 
   textarea {
+    resize: none;
     width: 100%;
     border: 0;
     background: color-mix(

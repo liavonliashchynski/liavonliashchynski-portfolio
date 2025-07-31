@@ -42,8 +42,8 @@ const Layout = () => {
       <div className="page">
         <Outlet />
       </div>
-      {console.log('isVisible:', isVisible)}
-      <ThemeToggle isVisible={isVisible} />
+      {/* {console.log('isVisible:', isVisible)}
+      <ThemeToggle isVisible={isVisible} /> */}
     </div>
   );
 };
