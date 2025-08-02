@@ -53,11 +53,10 @@
     .icons-second-row span {
       animation: fadeIn 2s 2s backwards;
       display: flex;
-      font-size: clamp(10px, 2vw, 30px);
+      font-size: clamp(5px, 2vw, 30px);
       align-items: center;
       padding: clamp(10px, 2vw, 50px);
       margin-bottom: clamp(10px, 2vw, 20px);
-      margin-right: clamp(10px, 2vw, 20px);
       border-radius: 8px;
       transition: ease-out 1s;
       background: color-mix(
