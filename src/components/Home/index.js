@@ -76,38 +76,46 @@ const Home = () => {
             idx={34}
           />
         </h1>
+        <p className="description">
+          I build fullstack web applications using technologies like React.js,
+          Redux, and TypeScript on the frontend, combined with Node.js,
+          Express.js, and MySQL on the backend. I also have experience with CSS
+          for styling and PHP for server-side scripting. I'm focused on writing
+          clean, maintainable code and delivering fast, responsive user
+          experiences from start to finish.
+        </p>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
       </div>
       <div className="tech-stack">
-        <p>My tech stack:</p>
+        <h1>My tech stack:</h1>
         <div className="icons-container">
           <div className="icons-first-row">
-            <span>
+            <span className="react-icon">
               <FaReact /> React.js
             </span>
-            <span>
+            <span className="redux-icon">
               <SiRedux /> Redux
             </span>
-            <span>
+            <span className="typescript-icon">
               <SiTypescript /> TypeScript
             </span>
-            <span>
+            <span className="css-icon">
               <FaCss3Alt /> CSS
             </span>
           </div>
           <div className="icons-second-row">
-            <span>
+            <span className="node-icon">
               <FaNodeJs /> Node.js
             </span>
-            <span>
+            <span className="express-icon">
               <SiExpress /> Express.js
             </span>
-            <span>
+            <span className="mysql-icon">
               <SiMysql /> MySQL
             </span>
-            <span>
+            <span className="php-icon">
               <FaPhp /> PHP
             </span>
           </div>
