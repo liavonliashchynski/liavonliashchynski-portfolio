@@ -1,6 +1,7 @@
-.text-zone {
-  border-radius: var(--border-radius);
-  background: var(--background-color);
+@import '../../styles/mixins';
+
+.about-me-container {
+  @include text-container-stylesheet;
   margin: 20px;
   display: flex;
   overflow-y: scroll;

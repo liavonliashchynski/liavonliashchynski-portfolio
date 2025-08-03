@@ -11,12 +11,7 @@
   padding: 13px;
 
   .text-zone {
-    background: color-mix(
-      in srgb,
-      var(--bg-color) 90%,
-      var(--neutral-base-color) 10%
-    );
-    border-radius: var(--border-radius);
+    @include text-container-stylesheet;
     padding: 20px;
   }
 

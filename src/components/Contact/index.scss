@@ -1,8 +1,11 @@
+@import '../../styles/mixins';
+
 .contact-page {
   display: flex;
   flex-direction: row;
   width: 70vw;
   overflow-y: auto;
+  @include text-container-stylesheet;
 }
 
 .contact-form {
@@ -22,17 +25,6 @@
       animation: fadeInUp 2s 2s;
       animation-fill-mode: forwards;
     }
-
-    // li.half {
-    //   width: 49%;
-    //   margin-left: 2%;
-    //   float: left;
-    //   clear: none;
-
-    //   &:first-child {
-    //     margin-left: 0;
-    //   }
-    // }
   }
 
   input[type='text'],
@@ -42,7 +34,7 @@
     background: color-mix(
       in srgb,
       var(--bg-color) 90%,
-      var(--neutral-base-color) 10%
+      var(--neutral-base-color) 20%
     );
     height: 50px;
     font-size: 16px;

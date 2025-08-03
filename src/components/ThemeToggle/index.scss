@@ -17,6 +17,11 @@
 
 .toggleThemeButton svg {
   color: var(--icon-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggleThemeButton.rotated svg {
+  transform: rotate(180deg);
 }
 
 .toggleThemeButton:hover {
