@@ -1,1 +1,8 @@
-
+.text-zone {
+  border-radius: var(--border-radius);
+  background: var(--background-color);
+  margin: 20px;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+}

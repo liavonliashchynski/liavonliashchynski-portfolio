@@ -89,7 +89,7 @@ const Home = () => {
         </Link>
       </div>
       <div className="tech-stack">
-        <h1>My tech stack:</h1>
+        <h1 className="my-tech-stack">My tech stack</h1>
         <div className="icons-container">
           <div className="icons-first-row">
             <span className="react-icon">

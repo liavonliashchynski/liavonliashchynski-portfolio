@@ -1,6 +1,11 @@
 @import '../../styles/mixins';
 
+.home-page::-webkit-scrollbar {
+  display: none;
+}
+
 .home-page {
+  overflow-y: scroll;
   display: flex;
   flex-direction: row;
   padding: 13px;
@@ -30,6 +35,14 @@
   }
 
   .tech-stack {
+    .my-tech-stack {
+      border: 1px solid var(--icon-color);
+      border-radius: var(--border-radius);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      padding: 5px;
+    }
     display: flex;
     flex-direction: column;
     font-size: clamp(25px, 2vw, 30px);
@@ -41,9 +54,11 @@
     );
     border-radius: var(--border-radius);
     padding: 20px;
+
     @include no-select;
 
     .icons-container {
+      margin: auto;
       display: flex;
       flex-direction: row;
       gap: 10px;
@@ -53,7 +68,7 @@
     .icons-second-row span {
       animation: fadeIn 2s 2s backwards;
       display: flex;
-      font-size: clamp(5px, 2vw, 30px);
+      font-size: clamp(5px, 3vw, 30px);
       align-items: center;
       padding: clamp(10px, 2vw, 50px);
       margin-bottom: clamp(10px, 2vw, 20px);

@@ -1,21 +1,30 @@
 .toggleThemeButton {
-  display: inline-block;
-  position: fixed;
-  height: 30px;
-  top: 13px;
-  right: 5px;
-  width: auto;
-  font-size: clamp(10px, 1vw, 13px);
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  z-index: 3;
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 0.3s;
+  //   height: 30px;
+  //   top: 13px;
+  //   right: 5px;
+  //   width: auto;
+  // font-size: clamp(10px, 1vw, 13px);
+  //   justify-content: flex-start;
+  //   align-items: center;
+  //   text-align: center;
+  //   z-index: 3;
+  //   opacity: 1;
+  //   pointer-events: auto;
+  //   transition: opacity 0.3s;
+  background: var(--navbar-bg);
+  border: none;
 }
 
-.toggleThemeButton.hidden {
-  opacity: 0;
-  pointer-events: none;
+.toggleThemeButton svg {
+  color: var(--icon-color);
 }
+
+.toggleThemeButton:hover {
+  background: var(--navbar-bg);
+  color: var(--icon-color);
+}
+
+// .toggleThemeButton.hidden {
+//   opacity: 0;
+//   pointer-events: none;
+// }

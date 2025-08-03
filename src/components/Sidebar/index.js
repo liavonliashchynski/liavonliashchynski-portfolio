@@ -2,12 +2,14 @@ import './index.scss';
 import { Link, NavLink } from 'react-router-dom';
 import LogoLL from '../../assets/images/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
   faHouseChimney,
   faUser,
   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import ThemeToggle from '../ThemeToggle';
 
 const Sidebar = () => (
   <div className="nav-bar">
@@ -33,6 +35,7 @@ const Sidebar = () => (
       >
         <FontAwesomeIcon icon={faEnvelope} color="white"></FontAwesomeIcon>
       </NavLink>
+      <ThemeToggle />
     </nav>
     <ul>
       <li>

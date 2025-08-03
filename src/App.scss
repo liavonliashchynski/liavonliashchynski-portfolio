@@ -2,7 +2,7 @@
 :root {
   --neutral-base-color: #ffffff;
   --bg-color: #000000;
-  --sidebar-color: #1a1a1a;
+  --sidebar-color: #000000;
 
   --icon-color: #ffffff;
   --icon-shadow-color: #ddddddae;
@@ -20,16 +20,15 @@
   --button-padding: 5px 5px;
   --button-font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   --button-width: auto;
-
-  --nav-bar-bg: #000000;
 }
 
 .light-theme {
   --neutral-base-color: #000000;
   --bg-color: #f5f5f5;
-  --sidebar-color: #434343;
+  --sidebar-color: #ffffff;
+  --icon-color-active: #000000;
 
-  --icon-color: #333333;
+  --icon-color: #000000;
   --icon-shadow-color: #000000ae;
 
   --text-color: #000000;
@@ -40,8 +39,6 @@
   --button-border-color: #000000;
   --border-radius: 5px;
   --button-thickness: 1px;
-
-  --nav-bar-bg: #dadada;
 }
 
 @import 'animate.css';
@@ -82,10 +79,6 @@ button:hover,
   transition: all 0.5s ease-out;
 }
 
-.nav-bar {
-  background: var(--nav-bar-bg);
-}
-
 a {
   color: var(--text-color);
 }
@@ -103,4 +96,9 @@ h1 {
 a {
   outline: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+svg {
+  color: var(--icon-color);
+  font-size: 23px;
 }
