@@ -11,17 +11,25 @@
   //   opacity: 1;
   //   pointer-events: auto;
   //   transition: opacity 0.3s;
+  cursor: pointer;
   background: var(--navbar-bg);
   border: none;
+  padding-top: 30px;
+  &:hover {
+    svg {
+      opacity: 0.5;
+      transition: all 0.5s ease-out;
+    }
+  }
 }
 
 .toggleThemeButton svg {
   color: var(--icon-color);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .toggleThemeButton.rotated svg {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .toggleThemeButton:hover {

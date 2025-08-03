@@ -19,7 +19,7 @@ const ThemeToggle = () => {
           document.body.classList.toggle('light-theme');
           setIsLight((prev) => !prev);
           setRotated(false);
-        }, 300);
+        }, 600);
       }}
     >
       {isLight ? <PiSunBold /> : <IoMoon />}

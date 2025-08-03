@@ -1,16 +1,20 @@
 @import '../../styles/mixins';
 
+.contact-page::-webkit-scrollbar {
+  display: none;
+}
+
 .contact-page {
   display: flex;
   flex-direction: row;
-  width: 70vw;
   overflow-y: auto;
   @include text-container-stylesheet;
 }
 
+.contact-me-text-zone {
+  @include text-zone-stylesheet;
+}
 .contact-form {
-  margin-top: 20px;
-
   ul {
     padding: 0;
     margin: 0;
@@ -27,8 +31,7 @@
     }
   }
 
-  input[type='text'],
-  input[type='email'] {
+  input {
     width: 100%;
     border: 0;
     background: color-mix(
@@ -50,7 +53,7 @@
     background: color-mix(
       in srgb,
       var(--bg-color) 90%,
-      var(--neutral-base-color) 10%
+      var(--neutral-base-color) 20%
     );
     height: 50px;
     font-size: 16px;
@@ -58,18 +61,6 @@
     padding: 20px;
     box-sizing: border-box;
     min-height: 150px;
-  }
-
-  .flat-button {
-    color: var(--button-color);
-    background: var(--button-bg-color);
-    border: var(--button-thickness) solid var(--button-border-color);
-    letter-spacing: var(--button-letter-spacing);
-    text-decoration: none;
-    padding: var(--button-padding);
-    text-transform: uppercase;
-    text-align: center;
-    margin-right: 10px;
   }
 }
 

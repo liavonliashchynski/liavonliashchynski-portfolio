@@ -5,7 +5,7 @@
   user-select: none;
 }
 
-@mixin text-container-stylesheet {
+@mixin text-zone-stylesheet {
   background: color-mix(
     in srgb,
     var(--bg-color) 90%,
@@ -13,4 +13,9 @@
   );
   padding: 20px;
   border-radius: var(--border-radius);
+}
+
+@mixin text-container-stylesheet {
+  padding: 13px;
+  width: auto;
 }

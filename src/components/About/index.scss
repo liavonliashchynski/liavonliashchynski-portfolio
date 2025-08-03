@@ -1,9 +1,12 @@
 @import '../../styles/mixins';
 
 .about-me-container {
-  @include text-container-stylesheet;
-  margin: 20px;
   display: flex;
-  overflow-y: scroll;
-  flex-direction: column;
+  flex-direction: row;
+  width: auto;
+  overflow-y: auto;
+  @include text-container-stylesheet;
+}
+.about-me-text-zone {
+  @include text-zone-stylesheet;
 }

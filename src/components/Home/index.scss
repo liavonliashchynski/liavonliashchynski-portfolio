@@ -9,9 +9,10 @@
   display: flex;
   flex-direction: row;
   padding: 13px;
+  @include text-container-stylesheet;
 
   .text-zone {
-    @include text-container-stylesheet;
+    @include text-zone-stylesheet;
     padding: 20px;
   }
 

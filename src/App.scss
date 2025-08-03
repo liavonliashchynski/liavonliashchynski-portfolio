@@ -1,4 +1,3 @@
-// Dark theme colors
 :root {
   --neutral-base-color: #ffffff;
   --bg-color: #000000;
@@ -58,7 +57,6 @@ body {
 input,
 textarea {
   font-family: 'Montserrat';
-  font-size: 50px;
   border-radius: var(--border-radius);
 }
 
@@ -78,6 +76,8 @@ button:hover,
   background: var(--button-color);
   color: var(--button-bg);
   transition: all 0.5s ease-out;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {

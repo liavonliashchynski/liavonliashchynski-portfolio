@@ -44,13 +44,7 @@ const Contact = () => {
     <>
       <div className="contact-page">
         <div className="contact-me-text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
-          </h1>
+          <h1>Contact me</h1>
           <p>
             I am interested in freelance opportunities - especially on ambitious
             or large projects. However, if you have any other requests or
@@ -59,10 +53,10 @@ const Contact = () => {
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
-                <li className="half">
+                <li>
                   <input placeholder="Name" type="text" name="name" required />
                 </li>
-                <li className="half">
+                <li>
                   <input
                     placeholder="Email"
                     type="email"
@@ -86,7 +80,7 @@ const Contact = () => {
                   ></textarea>
                 </li>
                 <li>
-                  <input type="submit" className="flat-button" value="SEND" />
+                  <button className="contact-submit-button">SEND</button>
                 </li>
               </ul>
             </form>
