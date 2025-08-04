@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/liavonliashchynski-portfolio/static/css/main.0104e37e.css",
-    "main.js": "/liavonliashchynski-portfolio/static/js/main.9e894c60.js",
+    "main.js": "/liavonliashchynski-portfolio/static/js/main.fe7ef45e.js",
     "static/js/453.8d00fd1b.chunk.js": "/liavonliashchynski-portfolio/static/js/453.8d00fd1b.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/liavonliashchynski-portfolio/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
     "static/media/logo.svg": "/liavonliashchynski-portfolio/static/media/logo.b717cf67aba9cf5f9d33015218292155.svg",
     "index.html": "/liavonliashchynski-portfolio/index.html",
     "main.0104e37e.css.map": "/liavonliashchynski-portfolio/static/css/main.0104e37e.css.map",
-    "main.9e894c60.js.map": "/liavonliashchynski-portfolio/static/js/main.9e894c60.js.map",
+    "main.fe7ef45e.js.map": "/liavonliashchynski-portfolio/static/js/main.fe7ef45e.js.map",
     "453.8d00fd1b.chunk.js.map": "/liavonliashchynski-portfolio/static/js/453.8d00fd1b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0104e37e.css",
-    "static/js/main.9e894c60.js"
+    "static/js/main.fe7ef45e.js"
   ]
 }
