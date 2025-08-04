@@ -2,7 +2,7 @@
 
 .about-me-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: auto;
   overflow-y: auto;
   @include text-container-stylesheet;

@@ -1,18 +1,7 @@
 import { useEffect, useState } from 'react';
-import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 3000);
-
-    return () => clearTimeout(timeout); // czyści timeout przy odmontowaniu komponentu
-  }, []);
-
   return (
     <>
       <div className="about-me-container">

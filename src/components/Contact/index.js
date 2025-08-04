@@ -23,8 +23,6 @@ const Contact = () => {
           window.location.reload(false);
         },
         (error) => {
-          console.error('❌ Email send failed:', error);
-          console.log(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
           alert('Failed to send the message, please try again');
         },
       );
@@ -70,8 +68,8 @@ const Contact = () => {
                   ></textarea>
                 </li>
               </ul>
+              <button className="contact-submit-button">SEND</button>
             </form>
-            <button className="contact-submit-button">SEND</button>
           </div>
         </div>
         {/* <div className="map-wrap">

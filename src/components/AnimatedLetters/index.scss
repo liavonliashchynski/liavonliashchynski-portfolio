@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .text-animate {
   opacity: 0;
   animation: fadeIn;
@@ -13,7 +15,7 @@
   animation-fill-mode: both;
 
   &:hover {
-    animation: rubberBand 1s;
+    @include text-animation;
     color: #ffd700;
   }
 }

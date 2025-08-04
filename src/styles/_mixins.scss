@@ -19,3 +19,7 @@
   padding: 13px;
   width: auto;
 }
+
+@mixin text-animation {
+  animation: fadeIn 2s 2s backwards;
+}

@@ -4,28 +4,26 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: row;
+  width: auto;
   @include text-container-stylesheet;
 
   .home-page-text-zone {
     @include text-zone-stylesheet;
-    padding: 20px;
   }
 
   .flat-button {
-    font-weight: var(--button-font-weight);
-    letter-spacing: var(--button-letter-spacing);
-    padding: var(--button-padding);
-    animation: fadeIn 5s 6s backwards;
+    animation: fadeIn 2s 2s backwards;
     white-space: nowrap;
     text-decoration: none;
     margin-top: 100px;
   }
 
   .description {
-    animation: fadeIn 5s 6s backwards;
+    @include text-animation;
   }
 
   .tech-stack {
+    margin-bottom: 5px;
     .my-tech-stack {
       border: 1px solid var(--icon-color);
       border-radius: var(--border-radius);
@@ -44,7 +42,6 @@
       var(--neutral-base-color) 10%
     );
     border-radius: var(--border-radius);
-    padding: 20px;
 
     @include no-select;
 
@@ -57,7 +54,7 @@
 
     .icons-first-row span,
     .icons-second-row span {
-      animation: fadeIn 2s 2s backwards;
+      @include text-animation;
       display: flex;
       font-size: clamp(5px, 3vw, 30px);
       align-items: center;
@@ -107,7 +104,7 @@
 @media (max-width: 900px) {
   .home-page {
     flex-direction: column;
-    max-width: 75vw;
+    width: auto;
     .tech-stack {
       margin-left: 0px;
       margin-top: 20px;
@@ -116,8 +113,4 @@
   .icons-container {
     flex-direction: column;
   }
-}
-.footer {
-  display: flex;
-  flex-direction: column;
 }
