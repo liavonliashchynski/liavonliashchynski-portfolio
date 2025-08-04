@@ -19,6 +19,8 @@
   --button-padding: 5px 5px;
   --button-font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   --button-width: auto;
+
+  --input-highlight-color: #ffffff;
 }
 
 .light-theme {
@@ -38,6 +40,8 @@
   --button-border-color: #000000;
   --border-radius: 5px;
   --button-thickness: 1px;
+
+  --input-highlight-color: #000000;
 }
 
 @import 'animate.css';
@@ -57,7 +61,18 @@ body {
 input,
 textarea {
   font-family: 'Montserrat';
+  border: none;
   border-radius: var(--border-radius);
+  background: color-mix(
+    in srgb,
+    var(--bg-color) 90%,
+    var(--neutral-base-color) 20%
+  );
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--input-highlight-color);
 }
 
 button,
@@ -69,6 +84,7 @@ button,
   font-size: var(--button-font-size);
   letter-spacing: var(--button-letter-spacing);
   flex: 0 0 auto;
+  cursor: pointer;
 }
 
 button:hover,
@@ -102,4 +118,13 @@ a {
 svg {
   color: var(--icon-color);
   font-size: 23px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
 }

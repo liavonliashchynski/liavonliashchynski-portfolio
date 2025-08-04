@@ -21,21 +21,6 @@ const Layout = () => {
 
   const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    const textZone = document.querySelector('.text-zone');
-    if (!textZone) return;
-
-    const handleScroll = () => {
-      setIsVisible(textZone.scrollTop < 50);
-    };
-
-    textZone.addEventListener('scroll', handleScroll);
-
-    return () => {
-      textZone.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div className="App">
       <Sidebar />

@@ -1,66 +1,52 @@
 @import '../../styles/mixins';
 
-.contact-page::-webkit-scrollbar {
-  display: none;
-}
-
 .contact-page {
   display: flex;
-  flex-direction: row;
-  overflow-y: auto;
+  flex-direction: column;
+  overflow-y: scroll;
   @include text-container-stylesheet;
-}
 
-.contact-me-text-zone {
-  @include text-zone-stylesheet;
-}
-.contact-form {
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      margin-bottom: 10px;
-      opacity: 0;
-      overflow: hidden;
-      animation: fadeInUp 2s 2s;
-      animation-fill-mode: forwards;
+  .contact-page-text-zone {
+    @include text-zone-stylesheet;
+  }
+  .contact-page-form {
+    input {
+      width: 100%;
+      border: none;
+      height: clamp(20px, 5vh, 60px);
+      font-size: 16px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
-  }
 
-  input {
-    width: 100%;
-    border: 0;
-    background: color-mix(
-      in srgb,
-      var(--bg-color) 90%,
-      var(--neutral-base-color) 20%
-    );
-    height: 50px;
-    font-size: 16px;
-    color: #fff;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
+    textarea {
+      resize: none;
+      box-sizing: border-box;
+      width: 100%;
+      background: color-mix(
+        in srgb,
+        var(--bg-color) 90%,
+        var(--neutral-base-color) 20%
+      );
+      margin-top: 20px;
+      height: 100px;
+      border: none;
+      padding: 10px 18px;
+      font-size: 16px;
+      // height: 50px;
+      //   font-size: 16px;
+      //   padding: 20px;
+      //   box-sizing: border-box;
+      //   min-height: 150px;
+    }
 
-  textarea {
-    resize: none;
-    width: 100%;
-    border: 0;
-    background: color-mix(
-      in srgb,
-      var(--bg-color) 90%,
-      var(--neutral-base-color) 20%
-    );
-    height: 50px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-    min-height: 150px;
+    .contact-submit-button {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
   }
 }
 

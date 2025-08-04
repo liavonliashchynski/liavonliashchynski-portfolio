@@ -1,17 +1,12 @@
 @import '../../styles/mixins';
 
-.home-page::-webkit-scrollbar {
-  display: none;
-}
-
 .home-page {
   overflow-y: scroll;
   display: flex;
   flex-direction: row;
-  padding: 13px;
   @include text-container-stylesheet;
 
-  .text-zone {
+  .home-page-text-zone {
     @include text-zone-stylesheet;
     padding: 20px;
   }

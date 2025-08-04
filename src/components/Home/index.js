@@ -51,8 +51,8 @@ const Home = () => {
   ];
 
   return (
-    <div className="container home-page">
-      <div className="text-zone">
+    <div className="home-page">
+      <div className="home-page-text-zone">
         <h1>
           <span className={`${letterClass} _11`}>H</span>
           <span className={`${letterClass} _12`}>i</span>

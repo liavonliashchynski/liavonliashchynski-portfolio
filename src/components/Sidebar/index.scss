@@ -2,7 +2,6 @@
 
 .nav-bar {
   width: clamp(80px, 10vw, 160px);
-  height: calc(var(--vh) * 100);
   display: flex;
   flex-direction: column;
   background-color: var(--sidebar-color);

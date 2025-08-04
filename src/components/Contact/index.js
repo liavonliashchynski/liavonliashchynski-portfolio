@@ -1,21 +1,11 @@
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
   const form = useRef();
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -43,14 +33,14 @@ const Contact = () => {
   return (
     <>
       <div className="contact-page">
-        <div className="contact-me-text-zone">
+        <div className="contact-page-text-zone">
           <h1>Contact me</h1>
           <p>
             I am interested in freelance opportunities - especially on ambitious
             or large projects. However, if you have any other requests or
             questions, don't hesitate to contact me using below form either.
           </p>
-          <div className="contact-form">
+          <div className="contact-page-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li>
@@ -79,11 +69,9 @@ const Contact = () => {
                     required
                   ></textarea>
                 </li>
-                <li>
-                  <button className="contact-submit-button">SEND</button>
-                </li>
               </ul>
             </form>
+            <button className="contact-submit-button">SEND</button>
           </div>
         </div>
         {/* <div className="map-wrap">
@@ -94,7 +82,7 @@ const Contact = () => {
           </MapContainer>
         </div> */}
       </div>
-      <div className="info-map">
+      {/* <div className="info-map">
         Liavon Liashchynski,
         <br />
         Polska,
@@ -103,7 +91,7 @@ const Contact = () => {
         <br />
         <span>liavonliashchynski@proton.me</span>
       </div>
-      <Loader type="pacman" />
+      <Loader type="pacman" /> */}
     </>
   );
 };
